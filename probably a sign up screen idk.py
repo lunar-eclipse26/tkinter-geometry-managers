@@ -1,0 +1,30 @@
+from tkinter import *
+root = Tk()
+root.title('baldis basics sign up screen d===(￣▽￣*)b')
+root.geometry('400x400')
+frame = Frame(master = root, height = 200, width = 360, bg = "#67e4c5")
+label_1 = Label(frame, text = 'FuLl nAmE', bg = "#3895d3", fg = "white", width = 12)
+label_2 = Label(frame, text = 'eMaIl iD', bg = "#3895d3", fg = "white", width = 12)
+label_3 = Label(frame, text = 'EnTeR PasSWoRd', bg = "#3895d3", fg = "white", width = 12)
+name_entry = Entry(frame)
+email_entry = Entry(frame)
+password_entry = Entry(frame, show = "*")
+def display():
+    name = name_entry.get()
+    greet = "yo " + name
+    message = "\n welcome to ███████████████.███ enjoy your stay"
+    # the censored text says "SomethingRandom.com" btw
+    textbox.insert(END, greet)
+    textbox.insert(END, message)
+textbox = Text(bg = "#BEBEBE", fg = "black")
+button = Button(text = "account create", command = display, bg = "red")
+frame.place(x = 20, y = 0)
+label_1.place(x = 20, y = 20)
+name_entry.place(x = 150, y = 20)
+label_2.place(x = 20, y = 80)
+email_entry.place(x = 150, y = 80)
+label_3.place(x = 20, y = 140)
+password_entry.place(x = 150, y = 140)
+button.place(x = 130, y = 210)
+textbox.place(y = 250)
+root.mainloop()
